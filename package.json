@@ -1,0 +1,14 @@
+{
+  "name": "systeminfoapp",
+  "version": "1.0.0",
+  "description": "get system information on desktop application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Bhanu Pratap",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^11.2.2"
+  }
+}

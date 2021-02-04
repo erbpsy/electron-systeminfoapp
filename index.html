@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>SystemInfoApp</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>SystemInformationApp</h1>
+        <div id="content"></div>
+    </div>
+</body>
+
+<script>
+    console.log(process);
+debugger;
+    var contentData = `
+    <h3 class="page-header">App Version Data</h3>
+    <ul class="list-group">
+        <li class="list-group-item">Node: ${process.versions.node} </li>
+        <li class="list-group-item">Chrome: ${process.versions.chrome} </li>
+        <li class="list-group-item">Electron: ${process.versions.electron} </li>
+        <li class="list-group-item">HTTP Parser: ${process.versions.http_parser} </li>
+        <li class="list-group-item">ICU: ${process.versions.icu} </li>
+        <li class="list-group-item">Modules: ${process.versions.modules} </li>
+        <li class="list-group-item">Open SSL: ${process.versions.openssl} </li>
+        <li class="list-group-item">V8: ${process.versions.v8} </li>
+        <li class="list-group-item">Brotli: ${process.versions.brotli} </li>
+    </ul>
+
+    <h3 class="page-header">System Specification</h3>
+    <ul class="list-group">
+        <li class="list-group-item">System Architecture: ${process.arch} </li>
+        <li class="list-group-item">Processor Identifier: ${process.env.PROCESSOR_IDENTIFIER} </li>
+        <li class="list-group-item">Operating System: ${process.env.OS} </li>
+        <li class="list-group-item">Lonon Server: ${process.env.LOGONSERVER} </li>
+    </ul>
+    `;
+document.getElementById('content').innerHTML=contentData;
+
+</script>
+<script>
+    require('./renderer.js');
+</script>
+
+</html>
